@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     
+     <!-- Icons -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     
+     <style>
+         #lista_func {
+             display: flex;
+             gap: 20px;
+             flex-wrap: wrap;
+             justify-content: center;
+         }
+ 
+         .card {
+             width: 300px;
+         }
+     </style>
+</head>
+<body>
+ 
+    <div class="container">
+        <h1>Lista de funcionarios</h1>
+    
+        <!-- CREATE -->
+        <form id="form_func" class="form">
+    
+            <label for="nome_func">Nome do funcionario:</label>
+            <input id="nome_func" required>
+    
+            <label for="cargo_func">Cargo:</label>
+            <input id="cargo_func" required>
+    
+            <label for="perfil_func">URL da foto de perfil:</label>
+            <input id="perfil_func" required>
+    
+            <!-- Botão dentro de um "formulario" por padrão é type="submit" -->
+              <button class="btn waves-effect waves-light orange darken-3" type="submit" name="action">
+                Adicionar
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    
+        <!-- READ -->
+        <div id="lista_func">
+        <!-- elementos filhos aqui -->
+    
+            <div class="card">
+                <div class="card-image">
+                <!-- URL da Imagem -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOGfxxyK7A94JihhIuCzZWUE1aIvtBCxCUEXEeJeVdKQ&s">
+                </div>
+                <div class="card-content">
+                <!-- Nome do funcionario -->
+                <span class="card-title">Tio Nobre</span> 
+                <!-- Cargo -->
+                <p>Professor Front-end</p>
+                </div>
+                <div class="card-action">
+                <a class="waves-effect waves-light btn amber"><i class="material-icons right">border_color</i>Editar</a>
+                <a class="waves-effect waves-light btn deep-orange"><i class="material-icons right">delete_sweep</i>Deletar</a>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- final do container -->
+        </div>
+
+        <script src="crud.js"></script>
+    
+</body>
+</html>
